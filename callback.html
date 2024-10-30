@@ -1,40 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Callback - Phibby</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación Exitosa</title>
 </head>
 <body>
-    <h1>Inicio de Sesión Exitoso</h1>
+    <h2>Inicio de Sesión Exitoso</h2>
     <p>Redireccionando...</p>
-    <script>
-        // Obtener el parámetro `code` de la URL de retorno
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
+    <script src="assets/js/callback.js"></script>
 
-        if (code) {
-            // Guardar o manejar el código de autorización
-            console.log("Código de autorización:", code);
-            
-            // Llamada al servidor con el código para procesarlo y obtener el token de Discord
-            fetch("https://tu-api.com/auth/discord", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ code })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log("Token recibido:", data.token);
-                // Redireccionar al usuario después de la autenticación
-                window.location.href = "/";
-            })
-            .catch(error => console.error("Error al autenticar:", error));
-        } else {
-            console.error("Código de autorización no encontrado en la URL");
-        }
-    </script>
 </body>
 </html>
