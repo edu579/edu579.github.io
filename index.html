@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Phibby &bull; Kacktide" />
+    <meta name="og:title" content="Phibby &bull; Kacktide" />
+    <meta name="twitter:title" content="Phibby &bull; Kacktide" />
+    <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos dolore corrupti fuga iure eum magni placeat optio tempora sed." />
+    <meta name="og:description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos dolore corrupti fuga iure eum magni placeat optio tempora sed." />
+    <meta name="twitter:description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos dolore corrupti fuga iure eum magni placeat optio tempora sed." />
+    <meta name="og:image" content="https://avatars.githubusercontent.com/u/70317531?v=4" />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/70317531?v=4" />
+    <meta name="theme-color" content="limegreen" />
+    <title>Phibby | Home</title>
+    <link rel="stylesheet" href="assets/css/@chunk.css" />
+    <meta name="theme-color" content="#163968" />
+    <link rel="shortcut icon" href="assets/img/memer.webp" type="image/x-icon" />
+    <style>
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .language-display {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .flag {
+            display: flex;
+            align-items: center;
+        }
+
+        .flag-image {
+            width: 30px;
+            height: auto;
+        }
+
+        .language-text {
+            margin-left: 5px;
+            font-size: 1.2rem;
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .language-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgb(18, 27, 19);
+            border-radius: 6px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .language-options.active {
+            display: block;
+        }
+
+        .language-options a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            margin: 5px 0;
+        }
+
+        .language-options a:hover {
+            color: #198c49;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container"> 
+            <img src="assets/img/phibby.png" alt="Phibby" class="logo" />
+            <span class="logo-name">Phibby</span>
+        </div>
+        <ul class="nav-items flex items-center">
+            <div class="nav-item-1">
+                <li><a href="#" class="nav-links"><ion-icon name="home-sharp"></ion-icon> Comandos</a></li>
+                <li><a href="#" class="nav-links"><ion-icon name="person-outline"></ion-icon> Invitame</a></li>
+                <li><a href="#" class="nav-links"><ion-icon name="cart-outline"></ion-icon> Tienda</a></li>
+                <li><a href="#" class="nav-links"><ion-icon name="code-slash-outline"></ion-icon> Developers</a></li>
+                <li><a href="#" class="nav-links"><ion-icon name="star-outline"></ion-icon> Premium</a></li>
+            </div>
+            <div class="nav-item-2 flex items-center ml-auto">
+                <div class="language-dropdown flex items-center">
+                    <div class="language-display" id="language-button" style="display: flex; align-items: center;">
+                        <span class="flag">
+                            <img src="assets/img/mexico.png" alt="🇲🇽" class="flag-image" style="margin-right: 5px;" />
+                        </span>
+                        <span class="language-text">ES</span>
+                        <span class="arrow" id="language-arrow" style="display: flex; align-items: center; margin-left: 5px;">
+                            <ion-icon name="chevron-down-outline" style="font-size: 1rem;"></ion-icon>
+                        </span>
+                    </div>
+                    <div class="language-options" id="language-options">
+                        <a href="#" data-lang="es">
+                            <img src="assets/img/mexico.png" alt="🇲🇽" class="flag-image" style="margin-right: 5px;" /> Español
+                        </a>
+                        <a href="#" data-lang="en">
+                            <img src="assets/img/usa.png" alt="🇬🇧" class="flag-image" style="margin-right: 5px;" /> English
+                        </a>
+                        <a href="#" data-lang="fr">
+                            <img src="assets/img/francia.png" alt="🇫🇷" class="flag-image" style="margin-right: 5px;" /> Français
+                        </a>
+                    </div>
+                </div>
+                <li>
+                    <a class="flex items-center gap-2 text-white text-sm font-bold hover:text-gray-300 transition duration-200" id="connexion-button" href="https://discord.com/api/oauth2/authorize?client_id=1243654191453306922&redirect_uri=https://phibby-bot.github.io/callback&response_type=code&scope=identify">
+                        <svg viewBox="0 0 24 24" style="width:1.125rem;height:1.125rem" role="presentation">
+                            <path d="M11 7L9.6 8.4L12.2 11H2V13H12.2L9.6 15.6L11 17L16 12L11 7M20 19H12V21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3H12V5H20V19Z" style="fill:currentColor"></path>
+                        </svg>
+                        Connexion
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <div class="hamburger"><ion-icon name="menu-outline"></ion-icon></div>
+    </nav>
+
+    <section class="home">
+        <h1 class="title-home">PHIBBY BOT </h1>
+        <p class="description">
+            Join millions of users around the world in playing the largest indie game on Discord.
+        </p>
+        <a href="#" target="_blank" class="button">INVITE NOW</a>
+    </section>
+
+    <section class="features">
+        <h1 class="title-normal">What is it all about?</h1>
+        <p class="description-normal">
+            Here are just a few of the things that make Dank Memer great.
+        </p>
+        <div class="card">
+            <div class="card-item">
+                <div class="icon"><ion-icon name="cash"></ion-icon></div>
+                <div>
+                    <h4 class="card-title">Money, Money, Money</h4>
+                    <p class="card-description">
+                        Experience one of the most unique economies found in any Discord bot.
+                    </p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="icon"><ion-icon name="people"></ion-icon></div>
+                <div>
+                    <h4 class="card-title">More Than I Can Count</h4>
+                    <p class="card-description">
+                        Even if you don't have friends, there are millions of other users waiting to rob you!
+                    </p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="icon"><ion-icon name="fish"></ion-icon></div>
+                <div>
+                    <h4 class="card-title">Fishy Fishy Fish</h4>
+                    <p class="card-description">
+                        Fishing is reel-y great! Wherever your cast is will be a fin-tastic adventure! You can even catch trash!
+                    </p>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="icon"><ion-icon name="settings"></ion-icon></div>
+                <div>
+                    <h4 class="card-title">Just Right, For You</h4>
+                    <p class="card-description">
+                        You are able to change specific elements of the bot off or on, personally or for your server.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="join">
+        <h1 class="title-normal">Join the family!</h1>
+        <p class="description-normal" style="margin-bottom: 0;">
+            Come join our friendly Discord community and have a blast!
+        </p>
+        <a href="#" target="_blank" class="button">JOIN NOW</a>
+    </section>
+
+    <footer class="footer">
+        <p>
+            © 2024 Phibby | Created by Kacktide
+            <!-- ID del bot: 1243654191453306922 -->
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons.js"></script>
+    <script>
+        const languageButton = document.getElementById('language-button');
+        const languageOptions = document.getElementById('language-options');
+        const languageArrow = document.getElementById('language-arrow');
+
+        languageButton.addEventListener('click', () => {
+            languageOptions.classList.toggle('active');
+            languageArrow.classList.toggle('rotate-180');
+        });
+
+        languageOptions.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                const lang = event.target.dataset.lang;
+                // Aquí puedes agregar la lógica para cambiar el idioma.
+                console.log(`Idioma seleccionado: ${lang}`);
+                languageOptions.classList.remove('active');
+                languageArrow.classList.remove('rotate-180');
+            }
+        });
+    </script>
+</body>
+</html>
