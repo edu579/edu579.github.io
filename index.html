@@ -6,16 +6,20 @@
     <meta name="title" content="Phibby &bull; Kacktide" />
     <meta name="og:title" content="Phibby &bull; Kacktide" />
     <meta name="twitter:title" content="Phibby &bull; Kacktide" />
-    <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos dolore corrupti fuga iure eum magni placeat optio tempora sed." />
-    <meta name="og:description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos dolore corrupti fuga iure eum magni placeat optio tempora sed." />
-    <meta name="twitter:description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda quos dolore corrupti fuga iure eum magni placeat optio tempora sed." />
+    <meta name="description" content="El bot definitivo para gestionar tu servidor. PHIBBY no es solo otro bot. Tiene funciones avanzadas de seguridad y recuperación protegerá tu servidor contra cualquier ataque. Además, su velocidad y eficacia te garantizan una administración sin problemas." />
+    <meta name="og:description" content="El bot definitivo para gestionar tu servidor. PHIBBY no es solo otro bot. Tiene funciones avanzadas de seguridad y recuperación protegerá tu servidor contra cualquier ataque. Además, su velocidad y eficacia te garantizan una administración sin problemas." />
+    <meta name="twitter:description" content="El bot definitivo para gestionar tu servidor. PHIBBY no es solo otro bot. Tiene funciones avanzadas de seguridad y recuperación protegerá tu servidor contra cualquier ataque. Además, su velocidad y eficacia te garantizan una administración sin problemas." />
     <meta name="og:image" content="https://avatars.githubusercontent.com/u/70317531?v=4" />
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/70317531?v=4" />
-    <meta name="theme-color" content="limegreen" />
+    <meta name="theme-color" content="blue" />
     <title>Phibby | Home</title>
     <link rel="stylesheet" href="assets/css/@chunk.css" />
     <meta name="theme-color" content="#163968" />
-    <link rel="shortcut icon" href="assets/img/memer.webp" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/img/phibby.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         .language-dropdown {
             position: relative;
@@ -50,31 +54,63 @@
         }
 
         .language-options {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgb(18, 27, 19);
-            border-radius: 6px;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 10;
+            display: none; /* Oculto por defecto */
+            position: absolute; /* Posicionamiento absoluto */
+            top: 100%; /* Justo debajo del botón */
+            left: 0; /* Alinear a la izquierda */
+            background: rgb(35, 36, 36); /* Fondo azul oscuro */
+            border-radius: 6px; /* Bordes redondeados */
+            padding: 15px; /* Espaciado interno aumentado */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
         }
 
         .language-options.active {
-            display: block;
+            display: block; /* Mostrar el menú cuando tiene la clase activa */
         }
 
-        .language-options a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #fff;
-            margin: 5px 0;
-        }
 
+        .language-options {
+            display: none; /* Oculto por defecto */
+            position: absolute; /* Posicionamiento absoluto */
+            top: 100%; /* Justo debajo del botón */
+            left: 0; /* Alinear a la izquierda */
+            background: rgb(22, 56, 103); /* Fondo azul oscuro */
+            border-radius: 6px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno aumentado */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+            max-width: 200px; /* Ancho máximo para evitar que sobresalga */
+            overflow: hidden; /* Oculta el desbordamiento de texto */
+        }
+        .language-button {
+            background-color: #007bff; /* Color azul para el botón */
+            color: #fff; /* Color blanco para el texto */
+            padding: 30px 50px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            font-size: 16px; /* Tamaño de fuente del botón */
+        }
+        .language-selector {
+            position: relative; /* Para que las opciones se posicionen correctamente */
+            display: inline-block; /* Para que se comporte como un bloque en línea */
+        }
         .language-options a:hover {
-            color: #198c49;
+            background-color: rgba(63, 63, 67, 0.7); /* Fondo azul al pasar el ratón */
+            color: #fff; /* Color del texto al pasar el ratón (blanco) */
+        }
+        
+        .language-options a {
+            display: flex; /* Flexbox para alinear elementos */
+            align-items: center; /* Centrar verticalmente */
+            text-decoration: none; /* Sin subrayado */
+            color: #fff; /* Color del texto normal (blanco) */
+            margin: 5px 0; /* Espaciado entre las opciones */
+            padding: 8px; /* Espaciado interno para un área clickeable más amplia */
+            border-radius: 4px; /* Bordes redondeados */
+            transition: background 0.3s ease; /* Transición suave para el fondo */
+            font-size: 14px; /* Tamaño de fuente para las opciones */
         }
 
         .rotate-180 {
@@ -86,11 +122,12 @@
     <nav class="navbar">
         <div class="logo-container"> 
             <img src="assets/img/phibby.png" alt="Phibby" class="logo" />
+            <a href="#" class="logo-link">
             <span class="logo-name">Phibby</span>
         </div>
         <ul class="nav-items flex items-center">
             <div class="nav-item-1">
-                <li><a href="#" class="nav-links"><ion-icon name="home-sharp"></ion-icon> Comandos</a></li>
+                <li><a href="commands.html" class="nav-links"><ion-icon name="home-sharp"></ion-icon> Comandos</a></li>
                 <li><a href="#" class="nav-links"><ion-icon name="person-outline"></ion-icon> Invitame</a></li>
                 <li><a href="#" class="nav-links"><ion-icon name="cart-outline"></ion-icon> Tienda</a></li>
                 <li><a href="#" class="nav-links"><ion-icon name="code-slash-outline"></ion-icon> Developers</a></li>
@@ -100,7 +137,7 @@
                 <div class="language-dropdown flex items-center">
                     <div class="language-display" id="language-button" style="display: flex; align-items: center;">
                         <span class="flag">
-                            <img src="assets/img/mexico.png" alt="🇲🇽" class="flag-image" style="margin-right: 5px;" />
+                            <img src="assets/img/espana.png" alt="🇲🇽" class="flag-image" style="margin-right: 5px;" />
                         </span>
                         <span class="language-text">ES</span>
                         <span class="arrow" id="language-arrow" style="display: flex; align-items: center; margin-left: 5px;">
@@ -109,7 +146,7 @@
                     </div>
                     <div class="language-options" id="language-options">
                         <a href="#" data-lang="es">
-                            <img src="assets/img/mexico.png" alt="🇲🇽" class="flag-image" style="margin-right: 5px;" /> Español
+                            <img src="assets/img/espana.png" alt="🇲🇽" class="flag-image" style="margin-right: 5px;" /> Español
                         </a>
                         <a href="#" data-lang="en">
                             <img src="assets/img/usa.png" alt="🇬🇧" class="flag-image" style="margin-right: 5px;" /> English
@@ -120,12 +157,11 @@
                     </div>
                 </div>
                 <li>
-                    <a class="flex items-center gap-2 text-white text-sm font-bold hover:text-gray-300 transition duration-200" id="connexion-button" href="https://discord.com/api/oauth2/authorize?client_id=1243654191453306922&redirect_uri=https://edu579.github.io/callback&response_type=code&scope=identify">
-                        <svg viewBox="0 0 24 24" style="width:1.125rem;height:1.125rem" role="presentation">
-                            <path d="M11 7L9.6 8.4L12.2 11H2V13H12.2L9.6 15.6L11 17L16 12L11 7M20 19H12V21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3H12V5H20V19Z" style="fill:currentColor"></path>
-                        </svg>
-                        Connexion
-                    </a>
+                    <a id="connexion-button" href="login.html">
+                        <ion-icon name="log-in-outline"></ion-icon>
+                        Iniciar sesión
+                      </a>
+                      
                 </li>
             </div>
         </ul>
@@ -133,72 +169,90 @@
     </nav>
 
     <section class="home">
-        <h1 class="title-home">PHIBBY BOT </h1>
+        <div class="logo-container">
+            <img src="https://media.discordapp.net/attachments/756936680467857419/1301236591183921163/image_1.png?ex=6723be83&is=67226d03&hm=429aaae15fdccac6d577bf47ca62500bc57bdd22cf4a02a558146882abc8ceb7&=&format=webp&quality=lossless&width=670&height=670" alt="Logo de Phibby Bot" class="bot-logo">
+        </div>
+        <h1 class="title-home">𝐏𝐇𝐈𝐁𝐁𝐘</h1>
         <p class="description">
-            Join millions of users around the world in playing the largest indie game on Discord.
+             ¿A que esperas para añadirme?
         </p>
-        <a href="#" target="_blank" class="button">INVITE NOW</a>
+        <div class="button-container">
+            <a class="button is-black is-medium" href="https://discord.com/oauth2/authorize?client_id=1243654191453306922&scope=bot" target="_blank">
+                <span><i class="fab fa-discord mr-2" aria-hidden="true"></i></span> Añadir Bot
+            </a>
+            <a class="button is-black is-medium login-button" href="https://discord.com/oauth2/authorize?client_id=1243654191453306922&redirect_uri=https://edu579.github.io/callback&response_type=code&scope=identify">
+                <span><i class="fas fa-user mr-2" aria-hidden="true"></i></span> Iniciar Sesión
+            </a>    
+        </div>
     </section>
+    
+    
+    
 
     <section class="features">
-        <h1 class="title-normal">What is it all about?</h1>
+        <h1 class="title-normal">Funciones Principales</h1>
         <p class="description-normal">
-            Here are just a few of the things that make Dank Memer great.
+            Descubre por qué Phibby es la opción ideal para optimizar y gestionar tu servidor de Discord.
         </p>
         <div class="card">
             <div class="card-item">
-                <div class="icon"><ion-icon name="cash"></ion-icon></div>
+                <div class="icon"><ion-icon name="cloud-upload-outline"></ion-icon></div>
                 <div>
-                    <h4 class="card-title">Money, Money, Money</h4>
+                    <h4 class="card-title">Backup Seguro</h4>
                     <p class="card-description">
-                        Experience one of the most unique economies found in any Discord bot.
+                        Phibby incluye un comando de respaldo que permite restaurar el servidor rápidamente en caso de pérdida de datos o incidentes. Mantén tu comunidad segura y operativa con una recuperación eficiente en cuestión de minutos.
                     </p>
                 </div>
             </div>
             <div class="card-item">
-                <div class="icon"><ion-icon name="people"></ion-icon></div>
+                <div class="icon"><ion-icon name="information-circle-outline"></ion-icon></div>
                 <div>
-                    <h4 class="card-title">More Than I Can Count</h4>
+                    <h4 class="card-title">Comandos de Información</h4>
                     <p class="card-description">
-                        Even if you don't have friends, there are millions of other users waiting to rob you!
+                        Phibby ofrece una amplia variedad de comandos informativos, ya sea sobre el servidor, los usuarios, el propio bot o incluso sus desarrolladores, para que siempre tengas a mano la información necesaria.
                     </p>
                 </div>
             </div>
             <div class="card-item">
-                <div class="icon"><ion-icon name="fish"></ion-icon></div>
+                <div class="icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
                 <div>
-                    <h4 class="card-title">Fishy Fishy Fish</h4>
+                    <h4 class="card-title">Verificación Oficial</h4>
                     <p class="card-description">
-                        Fishing is reel-y great! Wherever your cast is will be a fin-tastic adventure! You can even catch trash!
+                        Phibby es un bot verificado en Discord, lo que garantiza su seguridad y confiabilidad para tu comunidad.
                     </p>
                 </div>
             </div>
             <div class="card-item">
-                <div class="icon"><ion-icon name="settings"></ion-icon></div>
+                <div class="icon"><ion-icon name="construct-outline"></ion-icon></div>
                 <div>
-                    <h4 class="card-title">Just Right, For You</h4>
+                    <h4 class="card-title">Opciones de Configuración</h4>
                     <p class="card-description">
-                        You are able to change specific elements of the bot off or on, personally or for your server.
+                        Phibby ofrece múltiples opciones de personalización para hacer de tu servidor un espacio único, gracias a una variedad de comandos como Welcomer, Vanity, Event Boost y otros, que se adaptan a tus necesidades.
                     </p>
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
 
-    <section class="join">
-        <h1 class="title-normal">Join the family!</h1>
-        <p class="description-normal" style="margin-bottom: 0;">
-            Come join our friendly Discord community and have a blast!
-        </p>
-        <a href="#" target="_blank" class="button">JOIN NOW</a>
-    </section>
+
 
     <footer class="footer">
         <p>
-            © 2024 Phibby | Created by Kacktide
-            <!-- ID del bot: 1243654191453306922 -->
+            © 2024 Phibby | Copyright
         </p>
+        <div class="social-links">
+            <a href="https://discord.gg/59CAW3K7" target="_blank" aria-label="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://x.com/edu___579" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/edu579" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons.js"></script>
     <script>
