@@ -3,7 +3,6 @@ const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
 if (code) {
-    // Cambia estos valores con los tuyos
     const clientId = "1243654191453306922";
     const clientSecret = "TGtbEeM3aPLgDSY4LRK6HEgk8agbK0Fzt";
     const redirectUri = "https://edu579.github.io/callback";
@@ -17,7 +16,7 @@ if (code) {
         </div>
     `;
 
-    // Realiza la solicitud para obtener el token de acceso
+    // Solicitud para obtener el token de acceso
     fetch("https://discord.com/api/oauth2/token", {
         method: "POST",
         headers: {
@@ -34,11 +33,13 @@ if (code) {
     })
     .then(response => response.json())
     .then(data => {
+        console.log("Respuesta de token:", data); // Muestra el token o el error
+
+        if (data.error) {
+            throw new Error(`Error de token: ${data.error_description}`);
+        }
+
         const accessToken = data.access_token;
-
-        if (!accessToken) throw new Error("No se pudo obtener el token de acceso.");
-
-        // Realiza otra solicitud a la API de Discord para obtener el perfil del usuario
         return fetch("https://discord.com/api/users/@me", {
             headers: {
                 Authorization: `Bearer ${accessToken}`
@@ -47,7 +48,7 @@ if (code) {
     })
     .then(response => response.json())
     .then(user => {
-        // Muestra el nombre de usuario y el avatar en el HTML
+        console.log("Datos del usuario:", user);
         document.body.innerHTML = `
             <div class="container">
                 <h1>Bienvenido, ${user.username}#${user.discriminator}</h1>
@@ -56,7 +57,7 @@ if (code) {
         `;
     })
     .catch(error => {
-        console.error("Error al obtener los datos del usuario:", error);
+        console.error("Error al autenticar:", error);
         document.body.innerHTML = `
             <div class="container">
                 <h2>Error de Autenticación</h2>
@@ -65,6 +66,7 @@ if (code) {
         `;
     });
 } else {
+    console.error("Código de autorización no encontrado en la URL.");
     document.body.innerHTML = `
         <div class="container">
             <h2>Error</h2>
