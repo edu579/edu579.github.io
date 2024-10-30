@@ -4,7 +4,7 @@ const code = params.get("code");
 
 if (code) {
     const clientId = "1243654191453306922";
-    const clientSecret = "TGtbEeM3aPLgDSY4LRK6HEgk8agbK0Fzt";
+    const clientSecret = "fEi7swp38x2RjtpUWBtxsYiTbtPKhBEi";
     const redirectUri = "https://edu579.github.io/callback";
 
     // Mostrar mensaje de autenticación en progreso
