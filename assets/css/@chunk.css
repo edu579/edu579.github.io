@@ -10,7 +10,7 @@
 }
 
 body {
-  background: rgb(11, 17, 12);
+  background: rgb(49, 51, 56);
   overflow-x: hidden;
 }
 
@@ -25,7 +25,7 @@ body::-webkit-scrollbar-track {
 
 .navbar {
   width: 90%;
-  background: rgb(18, 27, 19);
+  background: rgb(35, 39, 42);
   padding: 0.75em;
   margin: 1.5vw auto;
   display: flex;
@@ -76,13 +76,23 @@ body::-webkit-scrollbar-track {
 } 
 
 .home {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  min-height: 100vh;
-  padding-top: 33vh;
-  margin-bottom: 30vh;
+  text-align: center; /* Centra todo el contenido dentro de la sección */
+  background-color: #29292c; /* Cambia esto por el color deseado */
+  padding: 20px; /* Añade un poco de espacio alrededor del contenido */
 }
+
+.button-container {
+    margin-top: 20px; /* Espacio entre el contenido y los botones */
+    padding: 20px; /* Espacio dentro del contenedor de los botones */
+    background-color: #333; /* Color de fondo del rectángulo, cambia según desees */
+    border-radius: 10px; /* Esquinas redondeadas, opcional */
+    display: flex; /* Alinea los botones horizontalmente */
+    justify-content: center; /* Centra los botones dentro del contenedor */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+
+  
 
 .title-home {
   font-weight: 700;
@@ -101,30 +111,20 @@ body::-webkit-scrollbar-track {
 }
 
 .button {
-  border: solid 3px rgb(54, 18, 154);
+  border: solid 3px rgb(50, 50, 50);
   text-decoration: none;
   font-size: 1.55rem;
   padding: 0.25em 0.75em;
   position: relative;
-  background: rgb(11, 17, 12);
-}
-
-.button::after {
-  content: "";
-  border: solid 3px rgb(33, 20, 118);
-  transition: 0.2s ease;
-  width: 178px;
-  height: 47px;
-  z-index: -69420;
-  position: absolute;
-  bottom: -10px;
-  right: -10px;
+  background: rgb(50, 50, 50); /* Gris oscuro */
+  color: white; /* Cambia el color del texto a blanco para mejor contraste */
 }
 
 .button:hover::after {
   bottom: -3px;
   right: -4px;
 }
+
 
 .features {
   min-height: 50vh;
@@ -167,7 +167,7 @@ body::-webkit-scrollbar-track {
 }
 
 ion-icon {
-  color: #211995;
+  color: rgb(255, 255, 255);
   font-size: 1.3rem;
   padding: 0.5em; /* Ajusta el espacio alrededor del icono */
   margin-right: 0.5rem; /* Espacio entre icono y texto */
@@ -228,7 +228,7 @@ ion-icon {
 }
 
 .footer-links:hover {
-  color: #198c49;
+  color: #19368c;
 }
 
 .hamburger {
@@ -304,7 +304,7 @@ ion-icon {
     display: flex; /* Para centrar la imagen en el contenedor */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    background-color: rgb(18, 27, 19); /* Fondo que contrasta con la imagen */
+    background-color: rgb(17, 12, 65); /* Fondo que contrasta con la imagen */
   }
 
   .logo-name {
@@ -377,5 +377,64 @@ ion-icon {
 }
 
 .language-menu-item:hover {
-  background-color: rgb(39, 54, 39); /* Color de fondo al pasar el ratón */
+  background-color: rgb(74, 81, 110); /* Color de fondo al pasar el ratón */
+}
+.home {
+  text-align: center; /* Centra todo el contenido dentro de la sección */
+}
+
+.logo-container {
+  margin-bottom: 15px; /* Espacio entre el logo y el título */
+}
+
+.bot-logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: 100px; /* Asegúrate de que sea cuadrado */
+  border-radius: 50%; /* Hace que el logo sea redondo */
+  object-fit: cover; /* Mantiene la proporción del logo al recortarlo */
+  display: block; /* Asegura que el logo se centre */
+  margin: 0 auto; /* Centra el logo horizontalmente */
+}
+.footer {
+  background-color: #181818;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #888;
+}
+
+/* Icon specific colors on hover */
+.fa-discord:hover {
+  color: #7289DA;
+}
+
+.fa-twitter:hover {
+  color: #1DA1F2;
+}
+
+.fa-github:hover {
+  color: #6e5494;
 }
