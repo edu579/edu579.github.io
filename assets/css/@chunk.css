@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background: rgb(11, 17, 12);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  background: rgb(66, 66, 66);
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(104, 104, 104);
+}
+
+.navbar {
+  width: 90%;
+  background: rgb(18, 27, 19);
+  padding: 0.75em;
+  margin: 1.5vw auto;
+  display: flex;
+  border-radius: 6px;
+  position: relative;
+  align-items: center; /* Centra verticalmente todos los elementos */
+  justify-content: space-between; /* Alinea los elementos dentro de la barra */
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  align-items: center; /* Asegúrate de que todos los elementos se alineen verticalmente */
+  justify-content: flex-end; /* Alinea los elementos al final (derecha) */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho */
+}
+
+.nav-links {
+  text-decoration: none;
+  font-size: 0.9rem; /* Tamaño del texto más pequeño */
+  padding: 0.5em;
+  font-weight: bold; /* Asegura que el texto esté en negrita */
+  transition: background-color 0.25s ease, color 0.25s ease; /* Añade transición para efectos */
+  text-align: center; /* Centro el texto en el enlace */
+  display: flex; /* Usar flexbox para alinear el icono y el texto */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.nav-links:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Efecto de hover */
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.nav-item-1,
+.nav-item-2 {
+  display: flex;
+}
+
+.login {
+  color: #ffffff;
+} 
+
+.home {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 33vh;
+  margin-bottom: 30vh;
+}
+
+.title-home {
+  font-weight: 700;
+  font-size: 6rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: -8px;
+}
+
+.description {
+  color: #9ca3af;
+  font-size: 1.3rem;
+  max-width: 570px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.button {
+  border: solid 3px rgb(54, 18, 154);
+  text-decoration: none;
+  font-size: 1.55rem;
+  padding: 0.25em 0.75em;
+  position: relative;
+  background: rgb(11, 17, 12);
+}
+
+.button::after {
+  content: "";
+  border: solid 3px rgb(33, 20, 118);
+  transition: 0.2s ease;
+  width: 178px;
+  height: 47px;
+  z-index: -69420;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+.button:hover::after {
+  bottom: -3px;
+  right: -4px;
+}
+
+.features {
+  min-height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 7.5vh;
+  margin-bottom: 12rem;
+  padding: 10px;
+}
+
+.title-normal {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.description-normal {
+  color: rgb(231, 231, 231);
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgb(8, 12, 8);
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 8px;
+  padding: 1.75em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: start;
+  place-self: center;
+  margin-top: 1.25rem;
+}
+
+.card-item {
+  padding: 0.5em;
+  padding-bottom: 1.25em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ion-icon {
+  color: #211995;
+  font-size: 1.3rem;
+  padding: 0.5em; /* Ajusta el espacio alrededor del icono */
+  margin-right: 0.5rem; /* Espacio entre icono y texto */
+}
+
+.card-description {
+  font-size: 0.8rem;
+  color: #dfdfdf;
+}
+
+.join {
+  margin: 0 auto;
+  text-align: center;
+  padding: 3em;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(8, 12, 8);
+}
+
+.footer-logo img {
+  height: 100px;
+  user-select: none;
+  cursor: default;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo-description {
+  color: #9ca3af;
+}
+
+.footer-items-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-items {
+  list-style: none;
+}
+
+.footer-links {
+  text-decoration: none;
+  color: #cfd2d8;
+  transition: 0.1s ease;
+}
+
+.footer-links:hover {
+  color: #198c49;
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+      width: 100vw;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    .navbar.active .nav-items {
+      display: flex;
+    }
+
+    .nav-items {
+      flex-direction: column;
+      display: none;
+      gap: 2.5rem;
+    }
+
+    .nav-item-1 {
+      flex-direction: column;
+    }
+
+    .hamburger {
+      display: inline-block;
+    }
+
+    .nav-item-2 li a:not(.login) {
+      display: none;
+    }
+
+    .login {
+      margin: auto;
+      width: 300px;
+      border-radius: 4px;
+      background-color: rgb(89, 50, 205);
+      font-weight: medium;
+      color: white;
+    }
+
+    .card {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0 auto;
+    }
+
+    .footer {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .logo-container {
+    display: flex; /* Usar flexbox para alinear logo y nombre */
+    align-items: center; /* Centrar verticalmente */
+    margin-right: auto; /* Empujar los elementos de navegación hacia la derecha */
+  }
+
+  .logo {
+    width: 45px; /* Tamaño del logo */
+    height: 45px; /* Altura igual al ancho para mantener la forma circular */
+    margin-right: 10px; /* Espacio entre el logo y el nombre */
+    border-radius: 50%; /* Hace que el logo sea redondo */
+    overflow: hidden; /* Asegura que el contenido que sobresale se oculte */
+    display: flex; /* Para centrar la imagen en el contenedor */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    background-color: rgb(18, 27, 19); /* Fondo que contrasta con la imagen */
+  }
+
+  .logo-name {
+    font-size: 1.5rem; /* Tamaño del texto del nombre */
+    font-weight: 700; /* Negrita para el nombre */
+    color: #fff; /* Color del texto */
+  }
+
+  .language-dropdown {
+    position: relative; /* Necesario para posicionar el menú desplegable */
+    display: flex; /* Flexbox para alinear el idioma y el botón */
+    align-items: center; /* Centra verticalmente */
+    margin-right: 1rem; /* Espacio entre el menú de idiomas y Connexion */
+}
+
+#connexion-button {
+  display: flex; /* Para mantener la alineación */
+  align-items: center; /* Centra verticalmente */
+  padding: 0.5em; /* Espaciado interno */
+  text-decoration: none; /* Quita el subrayado */
+  color: #fff; /* Color del texto */
+  transition: background-color 0.25s ease; /* Transición suave */
+}
+
+#connexion-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Efecto de hover */
+}
+
+.language-display {
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+}
+
+.flag {
+  display: flex; /* Para alinear la imagen de la bandera */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.flag-image {
+  width: 30px; /* Ajusta el tamaño de la bandera */
+  height: auto; /* Mantener la proporción */
+}
+
+.language-text {
+  margin-left: 5px; /* Espacio entre la bandera y el texto */
+  font-size: 1.2rem; /* Aumentar el tamaño del texto */
+}
+
+.arrow {
+  display: inline-block; /* Para permitir la animación */
+  margin-left: 5px; /* Espacio entre el texto y la flecha */
+  transition: transform 0.3s ease; /* Animación suave para la rotación */
+}
+
+.language-menu {
+  display: none; /* Ocultar el menú por defecto */
+  position: absolute; /* Permitir que el menú se superponga */
+  top: 100%; /* Colocar el menú debajo del botón */
+  left: 0; /* Alinear el menú a la izquierda */
+  background-color: rgb(18, 27, 19); /* Fondo del menú */
+  border-radius: 4px; /* Bordes redondeados */
+  z-index: 1; /* Asegurar que el menú esté por encima de otros elementos */
+}
+
+.language-menu-item {
+  padding: 10px; /* Espaciado interno para los elementos del menú */
+  cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+  transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
+}
+
+.language-menu-item:hover {
+  background-color: rgb(39, 54, 39); /* Color de fondo al pasar el ratón */
+}
