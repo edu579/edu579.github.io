@@ -1,0 +1,57 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Color al pasar el cursor */
+}
+
+/* Estilos para el panel de comandos */
+.container {
+    padding: 20px;
+}
+
+.panel-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.command-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.command {
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #444;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.command:hover {
+    transform: scale(1.05); /* Efecto al pasar el cursor */
+}
